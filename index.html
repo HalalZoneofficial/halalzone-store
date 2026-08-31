@@ -3,64 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HalalZone BD | 100% Authentic Products</title>
+
+    <title>HalalZone | Authentic Products</title>
+
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; }
-        header { background-color: #0d3b2e; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .brand { display: flex; align-items: center; gap: 12px; }
-        .brand img { height: 45px; border-radius: 6px; }
-        .brand span { font-size: 22px; font-weight: bold; color: #52c488; }
-        .search-box input { padding: 8px 12px; border-radius: 4px; border: none; outline: none; width: 220px; }
-        nav { background: #06241c; padding: 10px 20px; display: flex; gap: 15px; }
-        nav a { color: #e0e0e0; text-decoration: none; font-size: 14px; font-weight: 500; }
-        .hero { background: linear-gradient(135deg, #0d3b2e, #135845); color: white; padding: 40px 20px; text-align: center; margin-bottom: 20px; }
-        .hero h1 { margin-bottom: 10px; font-size: 28px; }
-        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
-        .card { background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; }
-        .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
-        .card h3 { margin: 10px 0; font-size: 18px; }
-        .price { color: #0d3b2e; font-weight: bold; font-size: 18px; margin-bottom: 10px; }
-        .btn-btn { background: #25d366; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; text-decoration: none; display: inline-block; }
-        footer { text-align: center; padding: 20px; background: #0d3b2e; color: white; margin-top: 40px; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #0d3b2e;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            height: 45px;
+            width: 45px;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .brand span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #52c488;
+        }
+
+        .search-box input {
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            width: 250px;
+            font-size: 14px;
+        }
+
+        nav {
+            background: #06241c;
+            padding: 12px 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #52c488;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0d3b2e, #135845);
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+            font-size: 34px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 35px 0 10px;
+            color: #0d3b2e;
+            font-size: 28px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin: 12px 0 8px;
+            font-size: 19px;
+        }
+
+        .price {
+            color: #0d3b2e;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .order-btn {
+            background: #25d366;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        .order-btn:hover {
+            background: #1db954;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0d3b2e;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Order Popup */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 500px;
+            margin: 5% auto;
+            padding: 25px;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 18px;
+            top: 10px;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .payment-box {
+            background: #f4f7f6;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .payment-box h3 {
+            color: #0d3b2e;
+            margin-bottom: 8px;
+        }
+
+        .payment-number {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .order-form input,
+        .order-form textarea {
+            width: 100%;
+            padding: 11px;
+            margin: 7px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #0d3b2e;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .brand span {
+                font-size: 21px;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
+    <!-- HEADER -->
+
     <header>
+
         <div class="brand">
-            <img src="HalaZonelogo.png" alt="HalalZone BD Logo">
-            <span>HalalZone BD</span>
+
+            <img src="HalaZonelogo.png" alt="HalalZone Logo">
+
+            <span>HalalZone</span>
+
         </div>
+
         <div class="search-box">
-            <input type="text" placeholder="প্রোডাক্ট খুঁজুন...">
+
+            <input
+                type="text"
+                placeholder="প্রোডাক্ট খুঁজুন..."
+                id="searchInput"
+                onkeyup="searchProducts()"
+            >
+
         </div>
+
     </header>
 
+
+    <!-- NAVIGATION -->
+
     <nav>
+
         <a href="#">হোম</a>
-        <a href="#">অল প্রোডাক্টস</a>
+        <a href="#products">অল প্রোডাক্টস</a>
         <a href="#">অফার</a>
         <a href="#">যোগাযোগ</a>
+
     </nav>
 
+
+    <!-- HERO -->
+
     <section class="hero">
-        <h1>Welcome to HalalZone BD</h1>
-        <p>১০০% খাঁটি ও হালাল পণ্যের বিশ্বস্ত প্রতিষ্ঠান</p>
+
+        <h1>Welcome to HalalZone</h1>
+
+        <p>১০০% খাঁটি ও বিশ্বস্ত পণ্যের অনলাইন শপ</p>
+
     </section>
 
-    <main class="products">
-        <div class="card">
-            <img src="https://via.placeholder.com/200" alt="Product">
+
+    <!-- PRODUCTS -->
+
+    <h2 class="section-title">আমাদের পণ্য</h2>
+
+    <main class="products" id="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="card product-card">
+
+            <img
+                src="https://via.placeholder.com/500x500"
+                alt="Premium Honey"
+            >
+
             <h3>Premium Honey</h3>
+
             <div class="price">৳ ৮৫০</div>
-            <a href="https://wa.me/8801700000000?text=I%20want%20to%20order" class="btn-btn">WhatsApp Order</a>
+
+            <button
+                class="order-btn"
+                onclick="openOrder('Premium Honey', '850')"
+            >
+                🛒 Order Now
+            </button>
+
         </div>
+
+
     </main>
 
+
+    <!-- ORDER MODAL -->
+
+    <div class="modal" id="orderModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeOrder()">&times;</span>
+
+            <h2>অর্ডার করুন</h2>
+
+            <br>
+
+            <p>
+                <strong>Product:</strong>
+                <span id="productName"></span>
+            </p>
+
+            <p>
+                <strong>Price:</strong>
+                ৳ <span id="productPrice"></span>
+            </p>
+
+
+            <!-- BKASH -->
+
+            <div class="payment-box">
+
+                <h3>📱 bKash</h3>
+
+                <p>Send Money করুন:</p>
+
+                <p class="payment-number">
+                    01764156969
+                </p>
+
+            </div>
+
+
+            <!-- NAGAD -->
+
+            <div class="payment-box">
+
+                <h3>💳 Nagad</h3>
+
+                <p>Send Money করুন:</p>
+
+                <p class="payment-number">
+                    01764156969
+                </p>
+
+            </div>
+
+
+            <!-- CUSTOMER FORM -->
+
+            <div class="order-form">
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="আপনার নাম"
+                >
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="মোবাইল নম্বর"
+                >
+
+                <textarea
+                    id="customerAddress"
+                    rows="3"
+                    placeholder="সম্পূর্ণ ঠিকানা"
+                ></textarea>
+
+                <input
+                    type="text"
+                    id="transactionId"
+                    placeholder="bKash/Nagad Transaction ID"
+                >
+
+                <button
+                    class="submit-btn"
+                    onclick="submitOrder()"
+                >
+                    অর্ডার কনফার্ম করুন
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
     <footer>
-        <p>&copy; 2026 HalalZone BD. All rights reserved.</p>
+
+        <p>
+            &copy; 2026 HalalZone. All rights reserved.
+        </p>
+
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        let selectedProduct = "";
+        let selectedPrice = "";
+
+        function openOrder(product, price) {
+
+            selectedProduct = product;
+            selectedPrice = price;
+
+            document.getElementById("productName").innerText = product;
+            document.getElementById("productPrice").innerText = price;
+
+            document.getElementById("orderModal").style.display = "block";
+        }
+
+
+        function closeOrder() {
+
+            document.getElementById("orderModal").style.display = "none";
+
+        }
+
+
+        function submitOrder() {
+
+            let name =
+                document.getElementById("customerName").value;
+
+            let phone =
+                document.getElementById("customerPhone").value;
+
+            let address =
+                document.getElementById("customerAddress").value;
+
+            let transaction =
+                document.getElementById("transactionId").value;
+
+
+            if (!name || !phone || !address) {
+
+                alert("অনুগ্রহ করে নাম, মোবাইল নম্বর ও ঠিকানা পূরণ করুন।");
+
+                return;
+            }
+
+
+            alert(
+                "আপনার অর্ডারের তথ্য গ্রহণ করা হয়েছে।\n\n" +
+                "Product: " + selectedProduct +
+                "\nPrice: ৳ " + selectedPrice +
+                "\n\nআপনার Transaction ID: " +
+                transaction
+            );
+
+        }
+
+
+        function searchProducts() {
+
+            let input =
+                document.getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            let products =
+                document.getElementsByClassName("product-card");
+
+
+            for (let i = 0; i < products.length; i++) {
+
+                let productName =
+                    products[i]
+                    .getElementsByTagName("h3")[0]
+                    .innerText
+                    .toLowerCase();
+
+
+                if (productName.includes(input)) {
+
+                    products[i].style.display = "";
+
+                } else {
+
+                    products[i].style.display = "none";
+
+                }
+
+            }
+
+        }
+
+    </script>
 
 </body>
 </html>
