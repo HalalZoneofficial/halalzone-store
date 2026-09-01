@@ -1,543 +1,1431 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HalalZone - Quality products, modest fashion and useful everyday essentials at honest prices.">
+<title>HalalZone | Shop with Trust & Barakah</title>
 
-    <title>HalalZone | Authentic Products</title>
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+:root{
+    --green:#0b4d3b;
+    --dark:#07382c;
+    --gold:#c6a15b;
+    --cream:#faf8f1;
+    --white:#ffffff;
+    --text:#1b2924;
+    --muted:#6d7772;
+    --border:#e7e1d4;
+}
 
-        body {
-            background-color: #f4f7f6;
-            color: #333;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        header {
-            background-color: #0d3b2e;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.6;
+}
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-        .brand img {
-            height: 45px;
-            width: 45px;
-            object-fit: contain;
-            border-radius: 6px;
-        }
+.container{
+    width:92%;
+    max-width:1180px;
+    margin:auto;
+}
 
-        .brand span {
-            font-size: 24px;
-            font-weight: bold;
-            color: #52c488;
-        }
+/* TOP BAR */
+.topbar{
+    background:var(--green);
+    color:white;
+    text-align:center;
+    padding:8px;
+    font-size:13px;
+}
 
-        .search-box input {
-            padding: 10px 14px;
-            border-radius: 6px;
-            border: none;
-            outline: none;
-            width: 250px;
-            font-size: 14px;
-        }
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(250,248,241,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+}
 
-        nav {
-            background: #06241c;
-            padding: 12px 20px;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+.nav{
+    min-height:74px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
 
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-        }
+/* TEMPORARY LOGO
+   Tomorrow replace this with your original HalalZone logo */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--green);
+    font-weight:800;
+    font-size:22px;
+}
 
-        nav a:hover {
-            color: #52c488;
-        }
+.logo-icon{
+    width:38px;
+    height:38px;
+    border:1px solid var(--gold);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    background:white;
+}
 
-        .hero {
-            background: linear-gradient(135deg, #0d3b2e, #135845);
-            color: white;
-            padding: 55px 20px;
-            text-align: center;
-        }
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    font-size:14px;
+    font-weight:600;
+}
 
-        .hero h1 {
-            margin-bottom: 10px;
-            font-size: 34px;
-        }
+.nav-links a:hover{
+    color:var(--gold);
+}
 
-        .hero p {
-            font-size: 18px;
-        }
+.shop-btn{
+    background:var(--green);
+    color:white!important;
+    padding:10px 17px;
+    border-radius:25px;
+}
 
-        .section-title {
-            text-align: center;
-            margin: 35px 0 10px;
-            color: #0d3b2e;
-            font-size: 28px;
-        }
+/* HERO */
+.hero{
+    padding:75px 0;
+    background:
+    radial-gradient(circle at 15% 20%,rgba(198,161,91,.10),transparent 25%),
+    var(--cream);
+}
 
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:50px;
+    align-items:center;
+}
 
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: 0.2s;
-        }
+.small-title{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
 
-        .card:hover {
-            transform: translateY(-3px);
-        }
+.hero h1{
+    font-family:Georgia,serif;
+    color:var(--green);
+    font-size:clamp(45px,6vw,75px);
+    line-height:1.05;
+    margin:15px 0;
+}
 
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+.hero p{
+    color:var(--muted);
+    max-width:600px;
+    font-size:17px;
+}
 
-        .card h3 {
-            margin: 12px 0 8px;
-            font-size: 19px;
-        }
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
 
-        .price {
-            color: #0d3b2e;
-            font-weight: bold;
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:30px;
+    border:1px solid var(--green);
+    font-weight:700;
+}
 
-        .order-btn {
-            background: #25d366;
-            color: white;
-            border: none;
-            padding: 11px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 15px;
-            width: 100%;
-        }
+.btn-primary{
+    background:var(--green);
+    color:white;
+}
 
-        .order-btn:hover {
-            background: #1db954;
-        }
+.btn-secondary{
+    background:white;
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #0d3b2e;
-            color: white;
-            margin-top: 40px;
-        }
+.hero-card{
+    background:white;
+    padding:12px;
+    border-radius:25px;
+    border:1px solid var(--border);
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
 
-        /* Order Popup */
+.hero-card img{
+    width:100%;
+    display:block;
+    border-radius:18px;
+}
 
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            padding: 20px;
-        }
+/* SECTION */
+.section{
+    padding:75px 0;
+}
 
-        .modal-content {
-            background: white;
-            max-width: 500px;
-            margin: 5% auto;
-            padding: 25px;
-            border-radius: 12px;
-            position: relative;
-        }
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
 
-        .close {
-            position: absolute;
-            right: 18px;
-            top: 10px;
-            font-size: 28px;
-            cursor: pointer;
-        }
+.section-title h2{
+    font-family:Georgia,serif;
+    color:var(--green);
+    font-size:40px;
+    margin-top:8px;
+}
 
-        .payment-box {
-            background: #f4f7f6;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
+.section-title p{
+    color:var(--muted);
+    max-width:650px;
+    margin:8px auto;
+}
 
-        .payment-box h3 {
-            color: #0d3b2e;
-            margin-bottom: 8px;
-        }
+/* CATEGORIES */
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
 
-        .payment-number {
-            font-size: 20px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+.category{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+}
 
-        .order-form input,
-        .order-form textarea {
-            width: 100%;
-            padding: 11px;
-            margin: 7px 0;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            outline: none;
-        }
+.category-icon{
+    font-size:28px;
+    margin-bottom:8px;
+}
 
-        .submit-btn {
-            width: 100%;
-            background: #0d3b2e;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 8px;
-        }
+.category h3{
+    color:var(--green);
+}
 
-        @media (max-width: 600px) {
-            .brand span {
-                font-size: 21px;
-            }
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
 
-            .search-box input {
-                width: 100%;
-            }
+.product{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.25s;
+}
 
-            .hero h1 {
-                font-size: 27px;
-            }
-        }
-    </style>
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.product-img{
+    width:100%;
+    aspect-ratio:1/1;
+    background:#f0eee7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.category-name{
+    font-size:11px;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+
+.product h3{
+    font-family:Georgia,serif;
+    color:var(--green);
+    font-size:21px;
+    margin:5px 0;
+}
+
+.product-desc{
+    color:var(--muted);
+    font-size:13px;
+    min-height:55px;
+}
+
+.price-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:15px 0;
+}
+
+.price{
+    font-size:24px;
+    color:var(--green);
+    font-weight:800;
+}
+
+.delivery{
+    font-size:10px;
+    color:var(--green);
+    background:#edf6f1;
+    padding:5px 8px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.order-btn{
+    width:100%;
+    border:0;
+    padding:13px;
+    border-radius:11px;
+    background:var(--green);
+    color:white;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.order-btn:hover{
+    background:var(--dark);
+}
+
+/* OFFER */
+.offer{
+    background:var(--green);
+    color:white;
+    border-radius:25px;
+    padding:45px;
+    text-align:center;
+}
+
+.offer h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+}
+
+.offer p{
+    color:#dcebe5;
+    margin:10px auto 20px;
+    max-width:650px;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.about-box{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:30px;
+}
+
+.about h2{
+    font-family:Georgia,serif;
+    color:var(--green);
+    font-size:38px;
+}
+
+.about p{
+    color:var(--muted);
+    margin-top:10px;
+}
+
+/* CONTACT */
+.contact{
+    background:#f1ecdf;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-box{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    border:1px solid var(--border);
+}
+
+.contact-box h3{
+    color:var(--green);
+    font-family:Georgia,serif;
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.contact-item{
+    padding:11px 0;
+    border-bottom:1px solid var(--border);
+    font-size:14px;
+}
+
+/* FOOTER */
+footer{
+    background:var(--dark);
+    color:#dce9e3;
+    padding:35px 0;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+/* MODAL */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    z-index:500;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    width:min(500px,100%);
+    background:white;
+    border-radius:22px;
+    padding:28px;
+    position:relative;
+}
+
+.modal-box h2{
+    font-family:Georgia,serif;
+    color:var(--green);
+}
+
+.close{
+    position:absolute;
+    right:17px;
+    top:12px;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.form-group{
+    margin-top:13px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #d9d5ca;
+    border-radius:10px;
+    font:inherit;
+}
+
+textarea{
+    min-height:80px;
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:16px;
+    padding:13px;
+    border:0;
+    border-radius:11px;
+    background:var(--green);
+    color:white;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.payment-note{
+    display:none;
+    margin-top:10px;
+    padding:10px;
+    background:#f6f1e5;
+    border-radius:10px;
+    font-size:12px;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-grid,
+    .about,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:560px){
+
+    .products,
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:50px 0;
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .footer-content{
+        flex-direction:column;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
+<div class="topbar">
+🚚 Nationwide Delivery • Cash on Delivery Available • Secure Payment
+</div>
 
-    <header>
+<header>
+<div class="container nav">
 
-        <div class="brand">
+<a href="#home" class="logo">
+    <span class="logo-icon">☾</span>
+    <span>HalalZone</span>
+</a>
 
-            <img src="HalaZonelogo.png" alt="HalalZone Logo">
+<nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#products">All Products</a>
+    <a href="#offers">Offers</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#products" class="shop-btn">Shop Now</a>
+</nav>
 
-            <span>HalalZone</span>
+</div>
+</header>
 
-        </div>
 
-        <div class="search-box">
+<!-- HERO -->
+<section class="hero" id="home">
 
-            <input
-                type="text"
-                placeholder="প্রোডাক্ট খুঁজুন..."
-                id="searchInput"
-                onkeyup="searchProducts()"
-            >
+<div class="container hero-grid">
 
-        </div>
+<div>
 
-    </header>
+<div class="small-title">
+Bismillah • Welcome to HalalZone
+</div>
 
+<h1>
+Shop with Trust.<br>
+Live with Barakah.
+</h1>
 
-    <!-- NAVIGATION -->
+<p>
+Discover carefully selected products, modest fashion and useful everyday essentials — with honest prices and convenient delivery across Bangladesh.
+</p>
 
-    <nav>
+<div class="hero-buttons">
+<a href="#products" class="btn btn-primary">
+Explore Products
+</a>
 
-        <a href="#">হোম</a>
-        <a href="#products">অল প্রোডাক্টস</a>
-        <a href="#">অফার</a>
-        <a href="#">যোগাযোগ</a>
+<a href="#contact" class="btn btn-secondary">
+Contact Us
+</a>
+</div>
 
-    </nav>
+</div>
 
 
-    <!-- HERO -->
+<div class="hero-card">
 
-    <section class="hero">
+<img
+src="https://placehold.co/700x800/f1eee5/0b4d3b?text=HalalZone"
+alt="HalalZone Collection">
 
-        <h1>Welcome to HalalZone</h1>
+</div>
 
-        <p>১০০% খাঁটি ও বিশ্বস্ত পণ্যের অনলাইন শপ</p>
+</div>
 
-    </section>
+</section>
 
 
-    <!-- PRODUCTS -->
+<!-- CATEGORIES -->
+<section class="section">
 
-    <h2 class="section-title">আমাদের পণ্য</h2>
+<div class="container">
 
-    <main class="products" id="products">
+<div class="section-title">
 
+<div class="small-title">
+Shop By Category
+</div>
 
-        <!-- PRODUCT 1 -->
+<h2>Our Collections</h2>
 
-        <div class="card product-card">
+<p>
+Explore fashion, everyday essentials, health products and useful gadgets.
+</p>
 
-            <img
-                src="https://via.placeholder.com/500x500"
-                alt="Premium Honey"
-            >
+</div>
 
-            <h3>Premium Honey</h3>
 
-            <div class="price">৳ ৮৫০</div>
+<div class="categories">
 
-            <button
-                class="order-btn"
-                onclick="openOrder('Premium Honey', '850')"
-            >
-                🛒 Order Now
-            </button>
+<div class="category">
+<div class="category-icon">🧕</div>
+<h3>Women's Collection</h3>
+<p>Sarees & accessories</p>
+</div>
 
-        </div>
+<div class="category">
+<div class="category-icon">☂️</div>
+<h3>Daily Essentials</h3>
+<p>Useful everyday products</p>
+</div>
 
+<div class="category">
+<div class="category-icon">🩺</div>
+<h3>Health & Care</h3>
+<p>Selected health essentials</p>
+</div>
 
-    </main>
+<div class="category">
+<div class="category-icon">✨</div>
+<h3>Special Offers</h3>
+<p>Best value products</p>
+</div>
 
+</div>
 
-    <!-- ORDER MODAL -->
+</div>
 
-    <div class="modal" id="orderModal">
+</section>
 
-        <div class="modal-content">
 
-            <span class="close" onclick="closeOrder()">&times;</span>
+<!-- PRODUCTS -->
+<section class="section" id="products">
 
-            <h2>অর্ডার করুন</h2>
+<div class="container">
 
-            <br>
+<div class="section-title">
 
-            <p>
-                <strong>Product:</strong>
-                <span id="productName"></span>
-            </p>
+<div class="small-title">
+Featured Products
+</div>
 
-            <p>
-                <strong>Price:</strong>
-                ৳ <span id="productPrice"></span>
-            </p>
+<h2>Shop Our Products</h2>
 
+<p>
+Quality products at customer-friendly prices. Delivery included on listed offers.
+</p>
 
-            <!-- BKASH -->
+</div>
 
-            <div class="payment-box">
 
-                <h3>📱 bKash</h3>
+<div class="products">
 
-                <p>Send Money করুন:</p>
 
-                <p class="payment-number">
-                    01764156969
-                </p>
+<!-- 1 -->
+<div class="product">
 
-            </div>
+<div class="product-img">
+<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Navy+Blue+Saree"
+alt="Navy Blue Heritage Saree">
+</div>
 
+<div class="product-info">
 
-            <!-- NAGAD -->
+<div class="category-name">
+Women's Collection
+</div>
 
-            <div class="payment-box">
+<h3>Navy Blue Heritage Saree</h3>
 
-                <h3>💳 Nagad</h3>
+<p class="product-desc">
+Elegant navy blue saree with a graceful traditional finish.
+</p>
 
-                <p>Send Money করুন:</p>
+<div class="price-row">
+<span class="price">৳899</span>
+<span class="delivery">Delivery Included</span>
+</div>
 
-                <p class="payment-number">
-                    01764156969
-                </p>
+<button class="order-btn"
+onclick="openOrder('Navy Blue Heritage Saree',899)">
+Order Now
+</button>
 
-            </div>
+</div>
+</div>
 
 
-            <!-- CUSTOMER FORM -->
+<!-- 2 -->
+<div class="product">
 
-            <div class="order-form">
+<div class="product-img">
+<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Hot+Pink+Saree"
+alt="Hot Pink Classic Saree">
+</div>
 
-                <input
-                    type="text"
-                    id="customerName"
-                    placeholder="আপনার নাম"
-                >
+<div class="product-info">
 
-                <input
-                    type="tel"
-                    id="customerPhone"
-                    placeholder="মোবাইল নম্বর"
-                >
+<div class="category-name">
+Women's Collection
+</div>
 
-                <textarea
-                    id="customerAddress"
-                    rows="3"
-                    placeholder="সম্পূর্ণ ঠিকানা"
-                ></textarea>
+<h3>Hot Pink Classic Saree</h3>
 
-                <input
-                    type="text"
-                    id="transactionId"
-                    placeholder="bKash/Nagad Transaction ID"
-                >
+<p class="product-desc">
+Vibrant hot-pink styling with elegant traditional detailing.
+</p>
 
-                <button
-                    class="submit-btn"
-                    onclick="submitOrder()"
-                >
-                    অর্ডার কনফার্ম করুন
-                </button>
+<div class="price-row">
+<span class="price">৳799</span>
+<span class="delivery">Delivery Included</span>
+</div>
 
-            </div>
+<button class="order-btn"
+onclick="openOrder('Hot Pink Classic Saree',799)">
+Order Now
+</button>
 
-        </div>
+</div>
+</div>
 
-    </div>
 
+<!-- 3 -->
+<div class="product">
 
-    <!-- FOOTER -->
+<div class="product-img">
+<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Rose+Pink+Saree"
+alt="Rose Pink Minimal Saree">
+</div>
 
-    <footer>
+<div class="product-info">
 
-        <p>
-            &copy; 2026 HalalZone. All rights reserved.
-        </p>
+<div class="category-name">
+Women's Collection
+</div>
 
-    </footer>
+<h3>Rose Pink Minimal Saree</h3>
 
+<p class="product-desc">
+Soft rose-pink look with delicate detailing for a refined style.
+</p>
 
-    <!-- JAVASCRIPT -->
+<div class="price-row">
+<span class="price">৳799</span>
+<span class="delivery">Delivery Included</span>
+</div>
 
-    <script>
+<button class="order-btn"
+onclick="openOrder('Rose Pink Minimal Saree',799)">
+Order Now
+</button>
 
-        let selectedProduct = "";
-        let selectedPrice = "";
+</div>
+</div>
 
-        function openOrder(product, price) {
 
-            selectedProduct = product;
-            selectedPrice = price;
+<!-- 4 -->
+<div class="product">
 
-            document.getElementById("productName").innerText = product;
-            document.getElementById("productPrice").innerText = price;
+<div class="product-img">
+<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Maroon+Saree"
+alt="Maroon Royal Border Saree">
+</div>
 
-            document.getElementById("orderModal").style.display = "block";
-        }
+<div class="product-info">
 
+<div class="category-name">
+Women's Collection
+</div>
 
-        function closeOrder() {
+<h3>Maroon Royal Border Saree</h3>
 
-            document.getElementById("orderModal").style.display = "none";
+<p class="product-desc">
+Deep maroon color with a beautiful royal golden-border finish.
+</p>
 
-        }
+<div class="price-row">
+<span class="price">৳999</span>
+<span class="delivery">Delivery Included</span>
+</div>
 
+<button class="order-btn"
+onclick="openOrder('Maroon Royal Border Saree',999)">
+Order Now
+</button>
 
-        function submitOrder() {
+</div>
+</div>
 
-            let name =
-                document.getElementById("customerName").value;
 
-            let phone =
-                document.getElementById("customerPhone").value;
+<!-- 5 -->
+<div class="product">
 
-            let address =
-                document.getElementById("customerAddress").value;
+<div class="product-img">
+<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Royal+Blue+Saree"
+alt="Royal Blue Heritage Saree">
+</div>
 
-            let transaction =
-                document.getElementById("transactionId").value;
+<div class="product-info">
 
+<div class="category-name">
+Women's Collection
+</div>
 
-            if (!name || !phone || !address) {
+<h3>Royal Blue Heritage Saree</h3>
 
-                alert("অনুগ্রহ করে নাম, মোবাইল নম্বর ও ঠিকানা পূরণ করুন।");
+<p class="product-desc">
+Rich royal blue styling with a classic woven border.
+</p>
 
-                return;
-            }
+<div class="price-row">
+<span class="price">৳899</span>
+<span class="delivery">Delivery Included</span>
+</div>
 
+<button class="order-btn"
+onclick="openOrder('Royal Blue Heritage Saree',899)">
+Order Now
+</button>
 
-            alert(
-                "আপনার অর্ডারের তথ্য গ্রহণ করা হয়েছে।\n\n" +
-                "Product: " + selectedProduct +
-                "\nPrice: ৳ " + selectedPrice +
-                "\n\nআপনার Transaction ID: " +
-                transaction
-            );
+</div>
+</div>
 
-        }
 
+<!-- 6 -->
+<div class="product">
 
-        function searchProducts() {
+<div class="product-img">
+<img src="https://placehold.co/700x700/eaf5f2/0b4d3b?text=Transparent+Umbrella"
+alt="China Transparent Umbrella">
+</div>
 
-            let input =
-                document.getElementById("searchInput")
-                .value
-                .toLowerCase();
+<div class="product-info">
 
-            let products =
-                document.getElementsByClassName("product-card");
+<div class="category-name">
+Daily Essentials
+</div>
 
+<h3>China Transparent Umbrella</h3>
 
-            for (let i = 0; i < products.length; i++) {
+<p class="product-desc">
+Stylish transparent umbrella for rainy-day protection.
+</p>
 
-                let productName =
-                    products[i]
-                    .getElementsByTagName("h3")[0]
-                    .innerText
-                    .toLowerCase();
+<div class="price-row">
+<span class="price">৳599</span>
+<span class="delivery">Delivery Included</span>
+</div>
 
+<button class="order-btn"
+onclick="openOrder('China Transparent Umbrella',599)">
+Order Now
+</button>
 
-                if (productName.includes(input)) {
+</div>
+</div>
 
-                    products[i].style.display = "";
 
-                } else {
+<!-- 7 -->
+<div class="product">
 
-                    products[i].style.display = "none";
+<div class="product-img">
+<img src="https://placehold.co/700x700/eaf5f2/0b4d3b?text=JSL-W302"
+alt="Mesh Nebulizer JSL-W302">
+</div>
 
-                }
+<div class="product-info">
 
-            }
+<div class="category-name">
+Health & Care
+</div>
 
-        }
+<h3>Mesh Nebulizer JSL-W302</h3>
 
-    </script>
+<p class="product-desc">
+Compact portable mesh nebulizer for convenient home use.
+</p>
+
+<div class="price-row">
+<span class="price">৳699</span>
+<span class="delivery">Delivery Included</span>
+</div>
+
+<button class="order-btn"
+onclick="openOrder('Mesh Nebulizer JSL-W302',699)">
+Order Now
+</button>
+
+</div>
+</div>
+
+
+<!-- 8 -->
+<div class="product">
+
+<div class="product-img">
+<img src="https://placehold.co/700x700/eaf5f2/0b4d3b?text=JSL-W303"
+alt="Mesh Nebulizer JSL-W303">
+</div>
+
+<div class="product-info">
+
+<div class="category-name">
+Health & Care
+</div>
+
+<h3>Mesh Nebulizer JSL-W303</h3>
+
+<p class="product-desc">
+Portable mesh nebulizer designed for convenient everyday use.
+</p>
+
+<div class="price-row">
+<span class="price">৳699</span>
+<span class="delivery">Delivery Included</span>
+</div>
+
+<button class="order-btn"
+onclick="openOrder('Mesh Nebulizer JSL-W303',699)">
+Order Now
+</button>
+
+</div>
+</div>
+
+
+<!-- 9 -->
+<div class="product">
+
+<div class="product-img">
+<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Flynova+Pro"
+alt="Flynova Pro">
+</div>
+
+<div class="product-info">
+
+<div class="category-name">
+Special Offers
+</div>
+
+<h3>Flynova Pro</h3>
+
+<p class="product-desc">
+Fun and entertaining flying spinner-style gadget for kids and families.
+</p>
+
+<div class="price-row">
+<span class="price">৳599</span>
+<span class="delivery">Delivery Included</span>
+</div>
+
+<button class="order-btn"
+onclick="openOrder('Flynova Pro',599)">
+Order Now
+</button>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+<!-- OFFER -->
+<section class="section" id="offers">
+
+<div class="container">
+
+<div class="offer">
+
+<div class="small-title" style="color:#dfc887">
+HalalZone Special Offer
+</div>
+
+<h2>
+Beautiful Products. Honest Prices.
+</h2>
+
+<p>
+Selected products are available with delivery included. Order easily through our website.
+</p>
+
+<a href="#products" class="btn btn-secondary">
+View Offers
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="section" id="about">
+
+<div class="container about">
+
+<div class="about-box">
+
+<div class="small-title">
+Our Promise
+</div>
+
+<h2>
+Simple. Modest. Trustworthy.
+</h2>
+
+<p>
+HalalZone aims to make online shopping simple, clear and reliable. We carefully present useful products and modest fashion with transparent pricing and convenient ordering.
+</p>
+
+</div>
+
+
+<div>
+
+<h2>
+Why Choose HalalZone?
+</h2>
+
+<p>
+We believe customers deserve honest information, fair prices and a smooth shopping experience. Our goal is to build a trusted online shopping destination for customers across Bangladesh.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small-title">
+Get In Touch
+</div>
+
+<h2>Contact HalalZone</h2>
+
+<p>
+Have a question about a product or your order? We are here to help.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-box">
+
+<h3>Customer Support</h3>
+
+<div class="contact-item">
+<strong>WhatsApp:</strong>
+<a href="https://wa.me/8801342003574" target="_blank">
+01342-003574
+</a>
+</div>
+
+<div class="contact-item">
+<strong>Payment:</strong>
+bKash / Nagad
+</div>
+
+<div class="contact-item">
+<strong>Payment Number:</strong>
+01764-156969
+</div>
+
+<div class="contact-item">
+<strong>Delivery:</strong>
+Available across Bangladesh
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>Payment Options</h3>
+
+<div class="contact-item">
+💵 Cash on Delivery
+</div>
+
+<div class="contact-item">
+📱 bKash — 01764-156969
+</div>
+
+<div class="contact-item">
+📱 Nagad — 01764-156969
+</div>
+
+<p style="font-size:12px;color:#777;margin-top:12px">
+WhatsApp is for communication and order confirmation only.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="container footer-content">
+
+<div>
+<strong style="color:white;font-size:20px">
+HalalZone
+</strong>
+
+<br>
+
+<span>
+Shop with Trust • Live with Barakah
+</span>
+
+</div>
+
+<div>
+© 2026 HalalZone. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ORDER MODAL -->
+<div class="modal" id="orderModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeOrder()">
+×
+</button>
+
+<div class="small-title">
+Order Request
+</div>
+
+<h2 id="orderTitle">
+Place Your Order
+</h2>
+
+<p id="orderPrice"
+style="font-size:13px;color:#777;margin-top:5px">
+</p>
+
+
+<form onsubmit="submitOrder(event)">
+
+<div class="form-group">
+<label>Full Name</label>
+<input
+type="text"
+id="customerName"
+placeholder="Your full name"
+required>
+</div>
+
+
+<div class="form-group">
+<label>Mobile Number</label>
+<input
+type="tel"
+id="customerPhone"
+placeholder="01XXXXXXXXX"
+required>
+</div>
+
+
+<div class="form-group">
+<label>Delivery Address</label>
+
+<textarea
+id="customerAddress"
+placeholder="Village/Road, Upazila, District"
+required></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Payment Method</label>
+
+<select id="paymentMethod" required>
+
+<option value="">
+Select payment method
+</option>
+
+<option value="Cash on Delivery">
+Cash on Delivery
+</option>
+
+<option value="bKash">
+bKash
+</option>
+
+<option value="Nagad">
+Nagad
+</option>
+
+</select>
+
+</div>
+
+
+<div class="payment-note" id="paymentNote"></div>
+
+
+<button type="submit" class="submit-btn">
+Place Order
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+let selectedProduct = "";
+let selectedPrice = 0;
+
+
+/* OPEN ORDER */
+function openOrder(product,price){
+
+selectedProduct = product;
+selectedPrice = price;
+
+document.getElementById("orderTitle").innerText =
+"Order " + product;
+
+document.getElementById("orderPrice").innerText =
+"Price: ৳" + price + " • Delivery Included";
+
+document.getElementById("orderModal")
+.classList.add("show");
+
+}
+
+
+/* CLOSE ORDER */
+function closeOrder(){
+
+document.getElementById("orderModal")
+.classList.remove("show");
+
+}
+
+
+/* PAYMENT INFO */
+document.getElementById("paymentMethod")
+.addEventListener("change",function(){
+
+const note =
+document.getElementById("paymentNote");
+
+if(this.value === "Cash on Delivery"){
+
+note.style.display = "block";
+
+note.innerHTML =
+"💵 You will pay the delivery person when your order arrives.";
+
+}
+
+else if(this.value === "bKash"){
+
+note.style.display = "block";
+
+note.innerHTML =
+"📱 bKash: <strong>01764-156969</strong><br>" +
+"Please complete payment and keep your transaction ID.";
+
+}
+
+else if(this.value === "Nagad"){
+
+note.style.display = "block";
+
+note.innerHTML =
+"📱 Nagad: <strong>01764-156969</strong><br>" +
+"Please complete payment and keep your transaction ID.";
+
+}
+
+else{
+
+note.style.display = "none";
+
+}
+
+});
+
+
+/* SUBMIT ORDER */
+function submitOrder(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("customerName")
+.value.trim();
+
+const phone =
+document.getElementById("customerPhone")
+.value.trim();
+
+const address =
+document.getElementById("customerAddress")
+.value.trim();
+
+const payment =
+document.getElementById("paymentMethod")
+.value;
+
+
+const message =
+`Assalamu Alaikum, I want to place an order:
+
+Product: ${selectedProduct}
+
+Price: ৳${selectedPrice}
+Delivery: Included
+Payment: ${payment}
+
+Customer Name: ${name}
+Mobile: ${phone}
+
+Delivery Address:
+${address}`;
+
+
+const whatsappURL =
+"https://wa.me/8801342003574?text="
++ encodeURIComponent(message);
+
+window.open(whatsappURL,"_blank");
+
+}
+
+
+/* CLICK OUTSIDE MODAL */
+document
+.getElementById("orderModal")
+.addEventListener("click",function(event){
+
+if(event.target === this){
+
+closeOrder();
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
