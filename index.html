@@ -3,553 +3,800 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="HalalZone - Quality products, modest fashion and useful everyday essentials at honest prices.">
-<title>HalalZone | Shop with Trust & Barakah</title>
+<meta name="theme-color" content="#087443">
+<meta name="description" content="HalalZone Store - Quality products with easy home delivery across Bangladesh.">
+<title>HalalZone Store | Quality Products, Trusted Service</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+:root{
+--green:#087443;
+--dark:#075c35;
+--gold:#c9a227;
+--cream:#f7f5ed;
+--text:#17231d;
+--muted:#68736d;
+--line:#e6ebe7;
 }
 
-:root{
-    --green:#0b4d3b;
-    --dark:#07382c;
-    --gold:#c6a15b;
-    --cream:#faf8f1;
-    --white:#ffffff;
-    --text:#1b2924;
-    --muted:#6d7772;
-    --border:#e7e1d4;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--cream);
-    color:var(--text);
-    line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:#f6f8f6;
+color:var(--text);
+padding-bottom:70px;
 }
 
 a{
-    text-decoration:none;
-    color:inherit;
+color:inherit;
+text-decoration:none;
 }
 
-.container{
-    width:92%;
-    max-width:1180px;
-    margin:auto;
+button,input,select,textarea{
+font:inherit;
 }
 
-/* TOP BAR */
 .topbar{
-    background:var(--green);
-    color:white;
-    text-align:center;
-    padding:8px;
-    font-size:13px;
+background:var(--dark);
+color:#fff;
+text-align:center;
+font-size:12px;
+padding:8px 10px;
 }
 
-/* HEADER */
 header{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(250,248,241,.96);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--border);
+position:sticky;
+top:0;
+z-index:50;
+background:#fff;
+border-bottom:1px solid var(--line);
+box-shadow:0 2px 10px rgba(0,0,0,.06);
 }
 
 .nav{
-    min-height:74px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
+max-width:1200px;
+margin:auto;
+padding:10px 16px;
+display:flex;
+align-items:center;
+gap:14px;
 }
 
-/* TEMPORARY LOGO
-   Tomorrow replace this with your original HalalZone logo */
+.brand{
+display:flex;
+align-items:center;
+gap:9px;
+min-width:max-content;
+}
+
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:var(--green);
-    font-weight:800;
-    font-size:22px;
+width:42px;
+height:42px;
+border-radius:50%;
+background:linear-gradient(135deg,var(--green),#0b9b5a);
+display:grid;
+place-items:center;
+color:#fff;
+font-size:20px;
+font-weight:bold;
+border:2px solid #d9c36b;
 }
 
-.logo-icon{
-    width:38px;
-    height:38px;
-    border:1px solid var(--gold);
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--gold);
-    background:white;
+.brand strong{
+font-size:18px;
+color:var(--dark);
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:24px;
-    font-size:14px;
-    font-weight:600;
+.brand small{
+display:block;
+color:#7b847f;
+font-size:10px;
+margin-top:2px;
 }
 
-.nav-links a:hover{
-    color:var(--gold);
+.search{
+flex:1;
+position:relative;
 }
 
-.shop-btn{
-    background:var(--green);
-    color:white!important;
-    padding:10px 17px;
-    border-radius:25px;
+.search input{
+width:100%;
+height:42px;
+border:1px solid #d9e1dc;
+border-radius:9px;
+padding:0 42px 0 14px;
+outline:none;
+background:#f8faf8;
 }
 
-/* HERO */
+.search input:focus{
+border-color:var(--green);
+}
+
+.search span{
+position:absolute;
+right:13px;
+top:10px;
+}
+
+.navlinks{
+display:flex;
+gap:16px;
+font-size:13px;
+color:#45524b;
+}
+
+.navlinks a:hover{
+color:var(--green);
+}
+
+.cart{
+border:0;
+background:#eff7f2;
+color:var(--dark);
+width:42px;
+height:42px;
+border-radius:9px;
+cursor:pointer;
+position:relative;
+}
+
+.count{
+position:absolute;
+right:-4px;
+top:-5px;
+background:#d73535;
+color:#fff;
+border-radius:20px;
+font-size:10px;
+padding:3px 6px;
+}
+
 .hero{
-    padding:75px 0;
-    background:
-    radial-gradient(circle at 15% 20%,rgba(198,161,91,.10),transparent 25%),
-    var(--cream);
+background:linear-gradient(135deg,#063e25,#087443 60%,#15925a);
+color:#fff;
 }
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:50px;
-    align-items:center;
-}
-
-.small-title{
-    color:var(--gold);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:2px;
-    text-transform:uppercase;
+.hero-inner{
+max-width:1200px;
+margin:auto;
+padding:38px 16px 42px;
+display:grid;
+grid-template-columns:1.35fr .65fr;
+gap:20px;
+align-items:center;
 }
 
 .hero h1{
-    font-family:Georgia,serif;
-    color:var(--green);
-    font-size:clamp(45px,6vw,75px);
-    line-height:1.05;
-    margin:15px 0;
+font-size:clamp(30px,5vw,52px);
+line-height:1.04;
+margin-bottom:13px;
 }
 
 .hero p{
-    color:var(--muted);
-    max-width:600px;
-    font-size:17px;
+color:#dcefe5;
+max-width:650px;
+line-height:1.6;
 }
 
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    margin-top:25px;
-    flex-wrap:wrap;
+.hero .cta{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:20px;
 }
 
 .btn{
-    display:inline-block;
-    padding:13px 22px;
-    border-radius:30px;
-    border:1px solid var(--green);
-    font-weight:700;
+border:0;
+border-radius:9px;
+padding:12px 17px;
+font-weight:700;
+cursor:pointer;
+display:inline-block;
 }
 
-.btn-primary{
-    background:var(--green);
-    color:white;
+.btn.gold{
+background:#e4c552;
+color:#173b29;
 }
 
-.btn-secondary{
-    background:white;
+.btn.light{
+background:#fff;
+color:var(--dark);
 }
 
 .hero-card{
-    background:white;
-    padding:12px;
-    border-radius:25px;
-    border:1px solid var(--border);
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.2);
+border-radius:16px;
+padding:20px;
 }
 
-.hero-card img{
-    width:100%;
-    display:block;
-    border-radius:18px;
+.hero-card h3{
+margin-bottom:12px;
 }
 
-/* SECTION */
+.hero-card div{
+padding:9px 0;
+border-bottom:1px solid rgba(255,255,255,.14);
+font-size:14px;
+}
+
+.hero-card div:last-child{
+border:0;
+}
+
+.features{
+max-width:1200px;
+margin:-18px auto 0;
+padding:0 16px;
+position:relative;
+}
+
+.feature-grid{
+background:#fff;
+border:1px solid var(--line);
+border-radius:14px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+box-shadow:0 7px 22px rgba(0,0,0,.06);
+}
+
+.feature{
+padding:15px;
+border-right:1px solid var(--line);
+font-size:12px;
+color:var(--muted);
+}
+
+.feature:last-child{
+border:0;
+}
+
+.feature b{
+display:block;
+color:#203028;
+font-size:13px;
+margin-bottom:4px;
+}
+
 .section{
-    padding:75px 0;
+max-width:1200px;
+margin:34px auto;
+padding:0 16px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
+.section-head{
+display:flex;
+align-items:end;
+justify-content:space-between;
+gap:12px;
+margin-bottom:17px;
 }
 
-.section-title h2{
-    font-family:Georgia,serif;
-    color:var(--green);
-    font-size:40px;
-    margin-top:8px;
+.section h2{
+font-size:25px;
 }
 
-.section-title p{
-    color:var(--muted);
-    max-width:650px;
-    margin:8px auto;
+.section-head p{
+font-size:12px;
+color:var(--muted);
 }
 
-/* CATEGORIES */
-.categories{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
+.chips{
+display:flex;
+gap:8px;
+overflow:auto;
+padding-bottom:4px;
+margin-bottom:16px;
 }
 
-.category{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:25px;
-    text-align:center;
+.chip{
+border:1px solid #dbe4df;
+background:#fff;
+border-radius:20px;
+padding:8px 13px;
+white-space:nowrap;
+cursor:pointer;
+color:#405047;
+font-size:12px;
 }
 
-.category-icon{
-    font-size:28px;
-    margin-bottom:8px;
+.chip.active,
+.chip:hover{
+background:var(--green);
+border-color:var(--green);
+color:#fff;
 }
 
-.category h3{
-    color:var(--green);
-}
-
-/* PRODUCTS */
 .products{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
 }
 
-.product{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:20px;
-    overflow:hidden;
-    transition:.25s;
+.product-card{
+background:#fff;
+border:1px solid var(--line);
+border-radius:13px;
+overflow:hidden;
+transition:.2s;
+box-shadow:0 2px 9px rgba(0,0,0,.035);
 }
 
-.product:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
+.product-card:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-.product-img{
-    width:100%;
-    aspect-ratio:1/1;
-    background:#f0eee7;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
+.product-image{
+height:250px;
+background:#f1f4f1;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
 }
 
-.product-img img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.product-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.badge{
+position:absolute;
+left:9px;
+top:9px;
+background:#eaf7ef;
+color:#087443;
+border-radius:20px;
+padding:5px 8px;
+font-size:10px;
+font-weight:700;
 }
 
 .product-info{
-    padding:20px;
+padding:13px;
 }
 
-.category-name{
-    font-size:11px;
-    color:var(--gold);
-    text-transform:uppercase;
-    letter-spacing:1px;
-    font-weight:bold;
+.category{
+font-size:10px;
+text-transform:uppercase;
+color:#718078;
+letter-spacing:.7px;
+margin-bottom:5px;
 }
 
-.product h3{
-    font-family:Georgia,serif;
-    color:var(--green);
-    font-size:21px;
-    margin:5px 0;
-}
-
-.product-desc{
-    color:var(--muted);
-    font-size:13px;
-    min-height:55px;
-}
-
-.price-row{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin:15px 0;
+.product-info h3{
+font-size:15px;
+min-height:38px;
+line-height:1.3;
 }
 
 .price{
-    font-size:24px;
-    color:var(--green);
-    font-weight:800;
+font-size:21px;
+font-weight:800;
+color:var(--dark);
+margin:8px 0 2px;
 }
 
-.delivery{
-    font-size:10px;
-    color:var(--green);
-    background:#edf6f1;
-    padding:5px 8px;
-    border-radius:20px;
-    font-weight:bold;
+.delivery-note{
+font-size:10px;
+color:#8a938e;
+margin-bottom:11px;
 }
 
-.order-btn{
-    width:100%;
-    border:0;
-    padding:13px;
-    border-radius:11px;
-    background:var(--green);
-    color:white;
-    font-weight:800;
-    cursor:pointer;
+.buy-btn{
+width:100%;
+border:1px solid #0a7546;
+background:#087443;
+color:#fff;
+border-radius:8px;
+padding:10px;
+cursor:pointer;
+font-weight:700;
 }
 
-.order-btn:hover{
-    background:var(--dark);
+.buy-btn:hover{
+background:#075c35;
 }
 
-/* OFFER */
 .offer{
-    background:var(--green);
-    color:white;
-    border-radius:25px;
-    padding:45px;
-    text-align:center;
+background:linear-gradient(135deg,#fff8db,#fff);
+border:1px solid #ead78a;
+border-radius:14px;
+padding:20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
 
-.offer h2{
-    font-family:Georgia,serif;
-    font-size:38px;
+.offer strong{
+font-size:22px;
+color:#6d5610;
 }
 
 .offer p{
-    color:#dcebe5;
-    margin:10px auto 20px;
-    max-width:650px;
+font-size:13px;
+color:#665f48;
+margin-top:5px;
 }
 
-/* ABOUT */
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-    align-items:center;
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
 }
 
-.about-box{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:22px;
-    padding:30px;
+.info-card{
+background:#fff;
+border:1px solid var(--line);
+border-radius:13px;
+padding:18px;
 }
 
-.about h2{
-    font-family:Georgia,serif;
-    color:var(--green);
-    font-size:38px;
+.info-card h3{
+margin-bottom:8px;
+color:var(--dark);
 }
 
-.about p{
-    color:var(--muted);
-    margin-top:10px;
+.info-card p{
+font-size:13px;
+color:var(--muted);
+line-height:1.6;
 }
 
-/* CONTACT */
-.contact{
-    background:#f1ecdf;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.contact-box{
-    background:white;
-    padding:28px;
-    border-radius:20px;
-    border:1px solid var(--border);
-}
-
-.contact-box h3{
-    color:var(--green);
-    font-family:Georgia,serif;
-    font-size:25px;
-    margin-bottom:12px;
-}
-
-.contact-item{
-    padding:11px 0;
-    border-bottom:1px solid var(--border);
-    font-size:14px;
-}
-
-/* FOOTER */
 footer{
-    background:var(--dark);
-    color:#dce9e3;
-    padding:35px 0;
+background:#0b3424;
+color:#dcebe3;
+margin-top:40px;
 }
 
-.footer-content{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
+.footer-inner{
+max-width:1200px;
+margin:auto;
+padding:30px 16px;
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:25px;
 }
 
-/* MODAL */
+footer h3{
+color:#fff;
+margin-bottom:8px;
+}
+
+footer p,
+footer li{
+font-size:12px;
+line-height:1.8;
+color:#b9d0c4;
+}
+
+footer ul{
+list-style:none;
+}
+
+.bottom-nav{
+display:none;
+}
+
 .modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.6);
-    z-index:500;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.55);
+z-index:100;
+align-items:flex-end;
+justify-content:center;
 }
 
 .modal.show{
-    display:flex;
+display:flex;
 }
 
 .modal-box{
-    width:min(500px,100%);
-    background:white;
-    border-radius:22px;
-    padding:28px;
-    position:relative;
+background:#fff;
+width:min(620px,100%);
+max-height:92vh;
+overflow:auto;
+border-radius:18px 18px 0 0;
+padding:20px;
 }
 
-.modal-box h2{
-    font-family:Georgia,serif;
-    color:var(--green);
+.modal-head{
+display:flex;
+justify-content:space-between;
+gap:10px;
+align-items:center;
+margin-bottom:14px;
 }
 
 .close{
-    position:absolute;
-    right:17px;
-    top:12px;
-    border:0;
-    background:none;
-    font-size:28px;
-    cursor:pointer;
+border:0;
+background:#eef3ef;
+border-radius:50%;
+width:34px;
+height:34px;
+cursor:pointer;
 }
 
-.form-group{
-    margin-top:13px;
+.order-summary{
+background:#f5f8f5;
+border-radius:10px;
+padding:12px;
+margin-bottom:13px;
 }
 
-.form-group label{
-    display:block;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:5px;
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
 }
 
-input,
-textarea,
-select{
-    width:100%;
-    padding:12px;
-    border:1px solid #d9d5ca;
-    border-radius:10px;
-    font:inherit;
+.field{
+margin-bottom:10px;
 }
 
-textarea{
-    min-height:80px;
+.field.full{
+grid-column:1/-1;
 }
 
-.submit-btn{
-    width:100%;
-    margin-top:16px;
-    padding:13px;
-    border:0;
-    border-radius:11px;
-    background:var(--green);
-    color:white;
-    font-weight:800;
-    cursor:pointer;
+.field label{
+display:block;
+font-size:11px;
+font-weight:700;
+margin-bottom:5px;
+color:#435149;
 }
 
-.payment-note{
-    display:none;
-    margin-top:10px;
-    padding:10px;
-    background:#f6f1e5;
-    border-radius:10px;
-    font-size:12px;
+.field input,
+.field textarea,
+.field select{
+width:100%;
+border:1px solid #d7e0da;
+border-radius:8px;
+padding:10px;
+outline:none;
+background:#fff;
 }
 
-/* MOBILE */
-@media(max-width:850px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero-grid,
-    .about,
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .categories{
-        grid-template-columns:repeat(2,1fr);
-    }
+.field textarea{
+min-height:75px;
+resize:vertical;
 }
 
-@media(max-width:560px){
+.payment{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+margin:8px 0 14px;
+}
 
-    .products,
-    .categories{
-        grid-template-columns:1fr;
-    }
+.pay-option{
+border:1px solid #d7e0da;
+border-radius:8px;
+padding:10px;
+text-align:center;
+cursor:pointer;
+font-size:12px;
+}
 
-    .hero{
-        padding:50px 0;
-    }
+.pay-option.selected{
+border-color:var(--green);
+background:#eef8f2;
+color:var(--dark);
+font-weight:700;
+}
 
-    .section{
-        padding:55px 0;
-    }
+.total{
+display:flex;
+justify-content:space-between;
+padding:13px 0;
+border-top:1px dashed #ccd7d0;
+font-size:16px;
+font-weight:800;
+}
 
-    .footer-content{
-        flex-direction:column;
-    }
+.confirm{
+width:100%;
+border:0;
+background:var(--green);
+color:#fff;
+padding:13px;
+border-radius:9px;
+font-weight:800;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+
+.navlinks{
+display:none;
+}
+
+.products{
+grid-template-columns:repeat(3,1fr);
+}
+
+.product-image{
+height:235px;
+}
+
+}
+
+@media(max-width:650px){
+
+body{
+padding-bottom:66px;
+}
+
+.nav{
+padding:9px 10px;
+gap:8px;
+}
+
+.brand strong{
+font-size:15px;
+}
+
+.brand small{
+font-size:8px;
+}
+
+.logo{
+width:36px;
+height:36px;
+font-size:18px;
+}
+
+.search{
+order:3;
+flex-basis:100%;
+}
+
+.search input{
+height:38px;
+}
+
+header .nav{
+flex-wrap:wrap;
+}
+
+.cart{
+width:38px;
+height:38px;
+}
+
+.hero-inner{
+grid-template-columns:1fr;
+padding:27px 14px 30px;
+}
+
+.hero-card{
+display:none;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.features{
+margin-top:-12px;
+padding:0 10px;
+}
+
+.feature-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.feature{
+border-bottom:1px solid var(--line);
+}
+
+.section{
+margin:27px auto;
+padding:0 10px;
+}
+
+.section h2{
+font-size:21px;
+}
+
+.products{
+grid-template-columns:repeat(2,1fr);
+gap:9px;
+}
+
+.product-image{
+height:205px;
+}
+
+.product-info{
+padding:10px;
+}
+
+.product-info h3{
+font-size:13px;
+min-height:34px;
+}
+
+.price{
+font-size:18px;
+}
+
+.buy-btn{
+font-size:12px;
+padding:9px;
+}
+
+.offer{
+display:block;
+padding:16px;
+}
+
+.offer .btn{
+margin-top:12px;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.footer-inner{
+grid-template-columns:1fr;
+padding-bottom:20px;
+}
+
+.bottom-nav{
+position:fixed;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+left:0;
+right:0;
+bottom:0;
+background:#fff;
+border-top:1px solid var(--line);
+z-index:80;
+box-shadow:0 -4px 15px rgba(0,0,0,.06);
+}
+
+.bottom-nav a{
+padding:9px 3px;
+text-align:center;
+font-size:10px;
+color:#536058;
+}
+
+.bottom-nav a b{
+display:block;
+font-size:17px;
+margin-bottom:2px;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.field.full{
+grid-column:auto;
+}
+
+.payment{
+grid-template-columns:1fr;
+}
+
 }
 </style>
 </head>
@@ -557,484 +804,81 @@ textarea{
 <body>
 
 <div class="topbar">
-🚚 Nationwide Delivery • Cash on Delivery Available • Secure Payment
+🕌 Quality Products • Trusted Service • Home Delivery Across Bangladesh
 </div>
 
 <header>
-<div class="container nav">
 
-<a href="#home" class="logo">
-    <span class="logo-icon">☾</span>
-    <span>HalalZone</span>
+<div class="nav">
+
+<a class="brand" href="#home">
+
+<div class="logo">HZ</div>
+
+<div>
+<strong>HalalZone</strong>
+<small>Trusted Online Store</small>
+</div>
+
 </a>
 
-<nav class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#products">All Products</a>
-    <a href="#offers">Offers</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-    <a href="#products" class="shop-btn">Shop Now</a>
-</nav>
+<div class="search">
+
+<input
+id="search"
+type="search"
+placeholder="Search products..."
+oninput="filterProducts()">
+
+<span>🔎</span>
 
 </div>
+
+<nav class="navlinks">
+
+<a href="#home">Home</a>
+<a href="#products">All Products</a>
+<a href="#offers">Offers</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<button class="cart" onclick="openCart()">
+
+🛒
+<span class="count" id="cartCount">0</span>
+
+</button>
+
+</div>
+
 </header>
 
 
-<!-- HERO -->
+<main>
+
 <section class="hero" id="home">
 
-<div class="container hero-grid">
+<div class="hero-inner">
 
 <div>
 
-<div class="small-title">
-Bismillah • Welcome to HalalZone
-</div>
-
 <h1>
-Shop with Trust.<br>
-Live with Barakah.
+Shop With Trust.<br>
+Shop With HalalZone.
 </h1>
 
 <p>
-Discover carefully selected products, modest fashion and useful everyday essentials — with honest prices and convenient delivery across Bangladesh.
+Quality products, transparent pricing and convenient home delivery across Bangladesh.
 </p>
 
-<div class="hero-buttons">
-<a href="#products" class="btn btn-primary">
-Explore Products
+<div class="cta">
+
+<a class="btn gold" href="#products">
+Shop Now
 </a>
 
-<a href="#contact" class="btn btn-secondary">
-Contact Us
-</a>
-</div>
-
-</div>
-
-
-<div class="hero-card">
-
-<img
-src="https://placehold.co/700x800/f1eee5/0b4d3b?text=HalalZone"
-alt="HalalZone Collection">
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CATEGORIES -->
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<div class="small-title">
-Shop By Category
-</div>
-
-<h2>Our Collections</h2>
-
-<p>
-Explore fashion, everyday essentials, health products and useful gadgets.
-</p>
-
-</div>
-
-
-<div class="categories">
-
-<div class="category">
-<div class="category-icon">🧕</div>
-<h3>Women's Collection</h3>
-<p>Sarees & accessories</p>
-</div>
-
-<div class="category">
-<div class="category-icon">☂️</div>
-<h3>Daily Essentials</h3>
-<p>Useful everyday products</p>
-</div>
-
-<div class="category">
-<div class="category-icon">🩺</div>
-<h3>Health & Care</h3>
-<p>Selected health essentials</p>
-</div>
-
-<div class="category">
-<div class="category-icon">✨</div>
-<h3>Special Offers</h3>
-<p>Best value products</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-<section class="section" id="products">
-
-<div class="container">
-
-<div class="section-title">
-
-<div class="small-title">
-Featured Products
-</div>
-
-<h2>Shop Our Products</h2>
-
-<p>
-Quality products at customer-friendly prices. Delivery included on listed offers.
-</p>
-
-</div>
-
-
-<div class="products">
-
-
-<!-- 1 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Navy+Blue+Saree"
-alt="Navy Blue Heritage Saree">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Women's Collection
-</div>
-
-<h3>Navy Blue Heritage Saree</h3>
-
-<p class="product-desc">
-Elegant navy blue saree with a graceful traditional finish.
-</p>
-
-<div class="price-row">
-<span class="price">৳899</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('Navy Blue Heritage Saree',899)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-<!-- 2 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Hot+Pink+Saree"
-alt="Hot Pink Classic Saree">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Women's Collection
-</div>
-
-<h3>Hot Pink Classic Saree</h3>
-
-<p class="product-desc">
-Vibrant hot-pink styling with elegant traditional detailing.
-</p>
-
-<div class="price-row">
-<span class="price">৳799</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('Hot Pink Classic Saree',799)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-<!-- 3 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Rose+Pink+Saree"
-alt="Rose Pink Minimal Saree">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Women's Collection
-</div>
-
-<h3>Rose Pink Minimal Saree</h3>
-
-<p class="product-desc">
-Soft rose-pink look with delicate detailing for a refined style.
-</p>
-
-<div class="price-row">
-<span class="price">৳799</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('Rose Pink Minimal Saree',799)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-<!-- 4 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Maroon+Saree"
-alt="Maroon Royal Border Saree">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Women's Collection
-</div>
-
-<h3>Maroon Royal Border Saree</h3>
-
-<p class="product-desc">
-Deep maroon color with a beautiful royal golden-border finish.
-</p>
-
-<div class="price-row">
-<span class="price">৳999</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('Maroon Royal Border Saree',999)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-<!-- 5 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Royal+Blue+Saree"
-alt="Royal Blue Heritage Saree">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Women's Collection
-</div>
-
-<h3>Royal Blue Heritage Saree</h3>
-
-<p class="product-desc">
-Rich royal blue styling with a classic woven border.
-</p>
-
-<div class="price-row">
-<span class="price">৳899</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('Royal Blue Heritage Saree',899)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-<!-- 6 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/eaf5f2/0b4d3b?text=Transparent+Umbrella"
-alt="China Transparent Umbrella">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Daily Essentials
-</div>
-
-<h3>China Transparent Umbrella</h3>
-
-<p class="product-desc">
-Stylish transparent umbrella for rainy-day protection.
-</p>
-
-<div class="price-row">
-<span class="price">৳599</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('China Transparent Umbrella',599)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-<!-- 7 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/eaf5f2/0b4d3b?text=JSL-W302"
-alt="Mesh Nebulizer JSL-W302">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Health & Care
-</div>
-
-<h3>Mesh Nebulizer JSL-W302</h3>
-
-<p class="product-desc">
-Compact portable mesh nebulizer for convenient home use.
-</p>
-
-<div class="price-row">
-<span class="price">৳699</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('Mesh Nebulizer JSL-W302',699)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-<!-- 8 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/eaf5f2/0b4d3b?text=JSL-W303"
-alt="Mesh Nebulizer JSL-W303">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Health & Care
-</div>
-
-<h3>Mesh Nebulizer JSL-W303</h3>
-
-<p class="product-desc">
-Portable mesh nebulizer designed for convenient everyday use.
-</p>
-
-<div class="price-row">
-<span class="price">৳699</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('Mesh Nebulizer JSL-W303',699)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-<!-- 9 -->
-<div class="product">
-
-<div class="product-img">
-<img src="https://placehold.co/700x700/f4efe5/0b4d3b?text=Flynova+Pro"
-alt="Flynova Pro">
-</div>
-
-<div class="product-info">
-
-<div class="category-name">
-Special Offers
-</div>
-
-<h3>Flynova Pro</h3>
-
-<p class="product-desc">
-Fun and entertaining flying spinner-style gadget for kids and families.
-</p>
-
-<div class="price-row">
-<span class="price">৳599</span>
-<span class="delivery">Delivery Included</span>
-</div>
-
-<button class="order-btn"
-onclick="openOrder('Flynova Pro',599)">
-Order Now
-</button>
-
-</div>
-</div>
-
-
-</div>
-</div>
-
-</section>
-
-
-<!-- OFFER -->
-<section class="section" id="offers">
-
-<div class="container">
-
-<div class="offer">
-
-<div class="small-title" style="color:#dfc887">
-HalalZone Special Offer
-</div>
-
-<h2>
-Beautiful Products. Honest Prices.
-</h2>
-
-<p>
-Selected products are available with delivery included. Order easily through our website.
-</p>
-
-<a href="#products" class="btn btn-secondary">
+<a class="btn light" href="#offers">
 View Offers
 </a>
 
@@ -1042,120 +886,538 @@ View Offers
 
 </div>
 
+
+<div class="hero-card">
+
+<h3>🚚 Delivery Information</h3>
+
+<div>📍 Thakurgaon — <b>৳80</b></div>
+
+<div>🇧🇩 All Bangladesh — <b>৳150</b></div>
+
+<div>💵 Cash on Delivery Available</div>
+
+<div>📱 bKash / Nagad Available</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- ABOUT -->
-<section class="section" id="about">
+<div class="features">
 
-<div class="container about">
+<div class="feature-grid">
 
-<div class="about-box">
-
-<div class="small-title">
-Our Promise
+<div class="feature">
+<b>🚚 Home Delivery</b>
+Across Bangladesh
 </div>
 
-<h2>
-Simple. Modest. Trustworthy.
-</h2>
+<div class="feature">
+<b>💵 Cash on Delivery</b>
+Easy & convenient
+</div>
 
-<p>
-HalalZone aims to make online shopping simple, clear and reliable. We carefully present useful products and modest fashion with transparent pricing and convenient ordering.
-</p>
+<div class="feature">
+<b>📱 bKash / Nagad</b>
+Easy payment option
+</div>
+
+<div class="feature">
+<b>💬 WhatsApp Support</b>
+01342-003574
+</div>
 
 </div>
 
+</div>
+
+
+<section class="section" id="products">
+
+<div class="section-head">
 
 <div>
 
-<h2>
-Why Choose HalalZone?
-</h2>
+<h2>All Products</h2>
 
-<p>
-We believe customers deserve honest information, fair prices and a smooth shopping experience. Our goal is to build a trusted online shopping destination for customers across Bangladesh.
-</p>
+<p>Explore our latest products</p>
 
 </div>
+
+</div>
+
+
+<div class="chips">
+
+<button class="chip active" onclick="setCategory('all',this)">
+All
+</button>
+
+<button class="chip" onclick="setCategory('saree',this)">
+Saree
+</button>
+
+<button class="chip" onclick="setCategory('lifestyle',this)">
+Lifestyle
+</button>
+
+<button class="chip" onclick="setCategory('healthcare',this)">
+Healthcare
+</button>
+
+<button class="chip" onclick="setCategory('gadget',this)">
+Gadget
+</button>
+
+</div>
+
+
+<div class="products">
+
+
+<!-- SAREE 1 -->
+
+<article
+class="product-card"
+data-name="navy blue heritage saree"
+data-category="saree">
+
+<div class="product-image">
+
+<img
+src="data:image/jpeg;base64,REPLACE_WITH_NAVY_IMAGE"
+alt="Navy Blue Heritage Saree">
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Saree</div>
+
+<h3>Navy Blue Heritage Saree</h3>
+
+<div class="price">৳899</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳80 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('Navy Blue Heritage Saree',899)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
+
+
+<!-- SAREE 2 -->
+
+<article
+class="product-card"
+data-name="hot pink classic saree"
+data-category="saree">
+
+<div class="product-image">
+
+<img
+src="data:image/jpeg;base64,REPLACE_WITH_HOT_PINK_IMAGE"
+alt="Hot Pink Classic Saree">
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Saree</div>
+
+<h3>Hot Pink Classic Saree</h3>
+
+<div class="price">৳799</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳80 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('Hot Pink Classic Saree',799)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
+
+
+<!-- SAREE 3 -->
+
+<article
+class="product-card"
+data-name="rose pink minimal saree"
+data-category="saree">
+
+<div class="product-image">
+
+<img
+src="data:image/jpeg;base64,REPLACE_WITH_ROSE_IMAGE"
+alt="Rose Pink Minimal Saree">
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Saree</div>
+
+<h3>Rose Pink Minimal Saree</h3>
+
+<div class="price">৳799</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳80 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('Rose Pink Minimal Saree',799)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
+
+
+<!-- SAREE 4 -->
+
+<article
+class="product-card"
+data-name="maroon royal border saree"
+data-category="saree">
+
+<div class="product-image">
+
+<img
+src="data:image/jpeg;base64,REPLACE_WITH_MAROON_IMAGE"
+alt="Maroon Royal Border Saree">
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Saree</div>
+
+<h3>Maroon Royal Border Saree</h3>
+
+<div class="price">৳999</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳80 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('Maroon Royal Border Saree',999)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
+
+
+<!-- SAREE 5 -->
+
+<article
+class="product-card"
+data-name="royal blue heritage saree"
+data-category="saree">
+
+<div class="product-image">
+
+<img
+src="data:image/jpeg;base64,REPLACE_WITH_BLUE_IMAGE"
+alt="Royal Blue Heritage Saree">
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Saree</div>
+
+<h3>Royal Blue Heritage Saree</h3>
+
+<div class="price">৳899</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳80 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('Royal Blue Heritage Saree',899)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
+
+
+<!-- UMBRELLA -->
+
+<article
+class="product-card"
+data-name="china transparent umbrella"
+data-category="lifestyle">
+
+<div class="product-image">
+
+<div class="no-photo">
+📷
+<small>Photo will be updated</small>
+</div>
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Lifestyle</div>
+
+<h3>China Transparent Umbrella</h3>
+
+<div class="price">৳499</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳80 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('China Transparent Umbrella',499)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
+
+
+<!-- NEBULIZER 302 -->
+
+<article
+class="product-card"
+data-name="mesh nebulizer jsl-w302"
+data-category="healthcare">
+
+<div class="product-image">
+
+<div class="no-photo">
+📷
+<small>Photo will be updated</small>
+</div>
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Healthcare</div>
+
+<h3>Mesh Nebulizer JSL-W302</h3>
+
+<div class="price">৳489</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳80 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('Mesh Nebulizer JSL-W302',489)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
+
+
+<!-- NEBULIZER 303 -->
+
+<article
+class="product-card"
+data-name="mesh nebulizer jsl-w303"
+data-category="healthcare">
+
+<div class="product-image">
+
+<div class="no-photo">
+📷
+<small>Photo will be updated</small>
+</div>
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Healthcare</div>
+
+<h3>Mesh Nebulizer JSL-W303</h3>
+
+<div class="price">৳499</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳80 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('Mesh Nebulizer JSL-W303',699)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
+
+
+<!-- FLYNOVA -->
+
+<article
+class="product-card"
+data-name="flynova pro"
+data-category="gadget">
+
+<div class="product-image">
+
+<div class="no-photo">
+📷
+<small>Photo will be updated</small>
+</div>
+
+<span class="badge">Available</span>
+
+</div>
+
+<div class="product-info">
+
+<div class="category">Gadget</div>
+
+<h3>Flynova Pro</h3>
+
+<div class="price">৳499</div>
+
+<div class="delivery-note">
+Delivery: Thakurgaon ৳90 • Bangladesh ৳150
+</div>
+
+<button
+class="buy-btn"
+onclick="openOrder('Flynova Pro',599)">
+🛒 Order Now
+</button>
+
+</div>
+
+</article>
 
 </div>
 
 </section>
 
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
+<section class="section" id="offers">
 
-<div class="container">
+<div class="offer">
 
-<div class="section-title">
+<div>
 
-<div class="small-title">
-Get In Touch
-</div>
-
-<h2>Contact HalalZone</h2>
+<strong>Special Delivery Offer</strong>
 
 <p>
-Have a question about a product or your order? We are here to help.
+Thakurgaon delivery ৳80 • All Bangladesh home delivery ৳150.
 </p>
 
 </div>
 
-
-<div class="contact-grid">
-
-<div class="contact-box">
-
-<h3>Customer Support</h3>
-
-<div class="contact-item">
-<strong>WhatsApp:</strong>
-<a href="https://wa.me/8801342003574" target="_blank">
-01342-003574
+<a class="btn gold" href="#products">
+Shop Now
 </a>
-</div>
-
-<div class="contact-item">
-<strong>Payment:</strong>
-bKash / Nagad
-</div>
-
-<div class="contact-item">
-<strong>Payment Number:</strong>
-01764-156969
-</div>
-
-<div class="contact-item">
-<strong>Delivery:</strong>
-Available across Bangladesh
-</div>
 
 </div>
 
+</section>
 
-<div class="contact-box">
 
-<h3>Payment Options</h3>
+<section class="section" id="contact">
 
-<div class="contact-item">
-💵 Cash on Delivery
-</div>
+<div class="section-head">
 
-<div class="contact-item">
-📱 bKash — 01764-156969
-</div>
+<div>
 
-<div class="contact-item">
-📱 Nagad — 01764-156969
-</div>
+<h2>Why Shop With HalalZone?</h2>
 
-<p style="font-size:12px;color:#777;margin-top:12px">
-WhatsApp is for communication and order confirmation only.
+<p>
+Simple, transparent and customer-friendly ordering.
 </p>
 
 </div>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h3>🔐 Trusted Ordering</h3>
+
+<p>
+Choose your product, delivery area and payment method. Your order details are collected clearly.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>💰 Flexible Payment</h3>
+
+<p>
+Pay through bKash or Nagad, or select Cash on Delivery where available.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>💬 WhatsApp Contact</h3>
+
+<p>
+WhatsApp for customer communication and support:
+<b>01342-003574</b>
+</p>
 
 </div>
 
@@ -1163,27 +1425,51 @@ WhatsApp is for communication and order confirmation only.
 
 </section>
 
+</main>
 
-<!-- FOOTER -->
+
 <footer>
 
-<div class="container footer-content">
+<div class="footer-inner">
 
 <div>
-<strong style="color:white;font-size:20px">
-HalalZone
-</strong>
 
-<br>
+<h3>HalalZone</h3>
 
-<span>
-Shop with Trust • Live with Barakah
-</span>
+<p>
+A modern online store for quality products with a clean, trustworthy and customer-friendly shopping experience.
+</p>
 
 </div>
 
+
 <div>
-© 2026 HalalZone. All Rights Reserved.
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#products">All Products</a></li>
+<li><a href="#offers">Offers</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<p>
+WhatsApp: 01342-003574<br>
+bKash/Nagad: 01764156969<br>
+Thakurgaon Delivery: ৳90<br>
+All Bangladesh: ৳150
+</p>
+
 </div>
 
 </div>
@@ -1191,94 +1477,201 @@ Shop with Trust • Live with Barakah
 </footer>
 
 
-<!-- ORDER MODAL -->
+<nav class="bottom-nav">
+
+<a href="#home">
+<b>⌂</b>
+Home
+</a>
+
+<a href="#products">
+<b>▦</b>
+Products
+</a>
+
+<a href="#offers">
+<b>🏷</b>
+Offers
+</a>
+
+<a href="#contact">
+<b>☏</b>
+Contact
+</a>
+
+</nav>
+
+
 <div class="modal" id="orderModal">
 
 <div class="modal-box">
 
-<button class="close" onclick="closeOrder()">
-×
-</button>
+<div class="modal-head">
 
-<div class="small-title">
-Order Request
+<h2>Place Your Order</h2>
+
+<button class="close" onclick="closeOrder()">×</button>
+
 </div>
 
-<h2 id="orderTitle">
-Place Your Order
-</h2>
 
-<p id="orderPrice"
-style="font-size:13px;color:#777;margin-top:5px">
-</p>
+<div class="order-summary">
+
+<b id="orderProduct">Product</b>
+
+<div style="margin-top:5px;color:#68736d;font-size:12px">
+
+Product Price:
+<b id="orderPrice">৳0</b>
+
+</div>
+
+</div>
 
 
 <form onsubmit="submitOrder(event)">
 
-<div class="form-group">
-<label>Full Name</label>
+<div class="form-grid">
+
+
+<div class="field">
+
+<label>Full Name *</label>
+
 <input
-type="text"
-id="customerName"
-placeholder="Your full name"
-required>
+id="name"
+required
+placeholder="Your name">
+
 </div>
 
 
-<div class="form-group">
-<label>Mobile Number</label>
+<div class="field">
+
+<label>Mobile Number *</label>
+
 <input
+id="phone"
+required
 type="tel"
-id="customerPhone"
-placeholder="01XXXXXXXXX"
-required>
+placeholder="01XXXXXXXXX">
+
 </div>
 
 
-<div class="form-group">
-<label>Delivery Address</label>
+<div class="field full">
+
+<label>Delivery Address *</label>
 
 <textarea
-id="customerAddress"
-placeholder="Village/Road, Upazila, District"
-required></textarea>
+id="address"
+required
+placeholder="House, village/road, upazila, district"></textarea>
 
 </div>
 
 
-<div class="form-group">
+<div class="field full">
 
-<label>Payment Method</label>
+<label>Delivery Area *</label>
 
-<select id="paymentMethod" required>
+<select
+id="area"
+required
+onchange="updateTotal()">
 
 <option value="">
-Select payment method
+Select delivery area
 </option>
 
-<option value="Cash on Delivery">
-Cash on Delivery
+<option value="thakurgaon">
+Thakurgaon — ৳80
 </option>
 
-<option value="bKash">
-bKash
-</option>
-
-<option value="Nagad">
-Nagad
+<option value="bangladesh">
+All Bangladesh — ৳150
 </option>
 
 </select>
 
 </div>
 
+</div>
 
-<div class="payment-note" id="paymentNote"></div>
+
+<label style="font-size:11px;font-weight:700;color:#435149">
+Payment Method *
+</label>
 
 
-<button type="submit" class="submit-btn">
-Place Order
+<div class="payment">
+
+<div
+class="pay-option selected"
+data-pay="COD"
+onclick="choosePay(this)">
+
+💵 Cash on Delivery
+
+</div>
+
+
+<div
+class="pay-option"
+data-pay="bKash"
+onclick="choosePay(this)">
+
+📱 bKash
+
+</div>
+
+
+<div
+class="pay-option"
+data-pay="Nagad"
+onclick="choosePay(this)">
+
+📱 Nagad
+
+</div>
+
+</div>
+
+
+<div
+id="paymentHint"
+style="font-size:11px;color:#6b756f;margin-bottom:10px">
+
+Pay cash when your order is delivered.
+
+</div>
+
+
+<div class="total">
+
+<span>Total</span>
+
+<span id="totalPrice">৳0</span>
+
+</div>
+
+
+<button
+class="confirm"
+type="submit">
+
+Confirm Order via WhatsApp
+
 </button>
+
+
+<p style="font-size:10px;color:#89918c;text-align:center;margin-top:9px">
+
+For bKash/Nagad payment, send payment to
+<b>01764156969</b>
+and keep your transaction ID ready.
+
+</p>
 
 </form>
 
@@ -1289,139 +1682,204 @@ Place Order
 
 <script>
 
-let selectedProduct = "";
-let selectedPrice = 0;
+let selectedProduct="";
+let selectedPrice=0;
+let selectedPay="COD";
+let cart=[];
+let category="all";
 
 
-/* OPEN ORDER */
-function openOrder(product,price){
+function openOrder(name,price){
 
-selectedProduct = product;
-selectedPrice = price;
+selectedProduct=name;
+selectedPrice=price;
 
-document.getElementById("orderTitle").innerText =
-"Order " + product;
+document.getElementById("orderProduct").textContent=name;
 
-document.getElementById("orderPrice").innerText =
-"Price: ৳" + price + " • Delivery Included";
+document.getElementById("orderPrice").textContent="৳"+price;
 
-document.getElementById("orderModal")
-.classList.add("show");
+document.getElementById("area").value="";
+
+document.getElementById("totalPrice").textContent="৳"+price;
+
+document.getElementById("orderModal").classList.add("show");
+
+document.body.style.overflow="hidden";
 
 }
 
 
-/* CLOSE ORDER */
 function closeOrder(){
 
-document.getElementById("orderModal")
-.classList.remove("show");
+document.getElementById("orderModal").classList.remove("show");
+
+document.body.style.overflow="";
 
 }
 
 
-/* PAYMENT INFO */
-document.getElementById("paymentMethod")
-.addEventListener("change",function(){
+function choosePay(el){
 
-const note =
-document.getElementById("paymentNote");
+document
+.querySelectorAll(".pay-option")
+.forEach(x=>x.classList.remove("selected"));
 
-if(this.value === "Cash on Delivery"){
+el.classList.add("selected");
 
-note.style.display = "block";
+selectedPay=el.dataset.pay;
 
-note.innerHTML =
-"💵 You will pay the delivery person when your order arrives.";
+document.getElementById("paymentHint").textContent=
 
-}
+selectedPay==="COD"
 
-else if(this.value === "bKash"){
+? "Pay cash when your order is delivered."
 
-note.style.display = "block";
-
-note.innerHTML =
-"📱 bKash: <strong>01764-156969</strong><br>" +
-"Please complete payment and keep your transaction ID.";
+: "Payment number: 01764156969 ("+selectedPay+").";
 
 }
 
-else if(this.value === "Nagad"){
 
-note.style.display = "block";
+function updateTotal(){
 
-note.innerHTML =
-"📱 Nagad: <strong>01764-156969</strong><br>" +
-"Please complete payment and keep your transaction ID.";
+let d=document.getElementById("area").value;
+
+let charge=
+
+d==="thakurgaon"
+?90
+:d==="bangladesh"
+?150
+:0;
+
+document.getElementById("totalPrice").textContent=
+"৳"+(selectedPrice+charge);
 
 }
 
-else{
 
-note.style.display = "none";
+function submitOrder(e){
+
+e.preventDefault();
+
+let area=document.getElementById("area").value;
+
+let charge=
+
+area==="thakurgaon"
+?90
+:area==="bangladesh"
+?150
+:0;
+
+if(!charge){
+
+alert("Please select your delivery area.");
+
+return;
 
 }
+
+let total=selectedPrice+charge;
+
+let name=document.getElementById("name").value.trim();
+
+let phone=document.getElementById("phone").value.trim();
+
+let address=document.getElementById("address").value.trim();
+
+let areaText=
+
+area==="thakurgaon"
+?"Thakurgaon"
+:"All Bangladesh";
+
+
+let message=
+
+"Assalamu Alaikum, I want to order from HalalZone.\n\n"+
+"Product: "+selectedProduct+"\n"+
+"Product Price: ৳"+selectedPrice+"\n"+
+"Delivery: "+areaText+" — ৳"+charge+"\n"+
+"Total: ৳"+total+"\n"+
+"Payment: "+selectedPay+"\n"+
+"Name: "+name+"\n"+
+"Mobile: "+phone+"\n"+
+"Address: "+address;
+
+
+window.open(
+"https://wa.me/8801342003574?text="+
+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+
+function filterProducts(){
+
+let q=
+document
+.getElementById("search")
+.value
+.toLowerCase()
+.trim();
+
+
+document
+.querySelectorAll(".product-card")
+.forEach(c=>{
+
+let ok=
+
+(category==="all" ||
+c.dataset.category===category)
+
+&&
+
+c.dataset.name.includes(q);
+
+c.style.display=ok?"":"none";
 
 });
 
-
-/* SUBMIT ORDER */
-function submitOrder(event){
-
-event.preventDefault();
-
-const name =
-document.getElementById("customerName")
-.value.trim();
-
-const phone =
-document.getElementById("customerPhone")
-.value.trim();
-
-const address =
-document.getElementById("customerAddress")
-.value.trim();
-
-const payment =
-document.getElementById("paymentMethod")
-.value;
+}
 
 
-const message =
-`Assalamu Alaikum, I want to place an order:
+function setCategory(c,el){
 
-Product: ${selectedProduct}
+category=c;
 
-Price: ৳${selectedPrice}
-Delivery: Included
-Payment: ${payment}
+document
+.querySelectorAll(".chip")
+.forEach(x=>x.classList.remove("active"));
 
-Customer Name: ${name}
-Mobile: ${phone}
+el.classList.add("active");
 
-Delivery Address:
-${address}`;
-
-
-const whatsappURL =
-"https://wa.me/8801342003574?text="
-+ encodeURIComponent(message);
-
-window.open(whatsappURL,"_blank");
+filterProducts();
 
 }
 
 
-/* CLICK OUTSIDE MODAL */
+function openCart(){
+
+alert(
+cart.length
+?
+"Your cart has "+cart.length+" item(s)."
+:
+"Your cart is empty. Use Order Now to place an order."
+);
+
+}
+
+
 document
 .getElementById("orderModal")
-.addEventListener("click",function(event){
+.addEventListener("click",e=>{
 
-if(event.target === this){
-
+if(e.target.id==="orderModal")
 closeOrder();
-
-}
 
 });
 
